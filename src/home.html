@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="bg-white py-3 shadow-sm ">
+            <div id="cart-body" class=" container hidden shadow-lg fixed top-16 right-0 h-64 w-64 bg-white px-6 py-6">
+                <button id="menu-btn" class="block hamburger focus:outline-none ">
+                    <span class="hamburger-top "></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>                           
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="home.html" class=" text-red-400 text-2xl font-bold uppercase">sa<span
+                    class="text-black">nity</span></a>
+            <div class="flex items-center max-w-xl relative w-auto md:w-full">
+                <input type="text" class=" w-full py-4 border border-red-400 pl-12 focus:outline-none border-r-0"
+                    placeholder="search">
+                <button
+                    class="bg-red-400 py-4 px-6 border border-red-400 transition rounded-l-none rounded-md text-white font-semibold hover:bg-transparent hover:text-red-400">Search</button>
+            </div>
+            <div class=" items-center space-x-4 hidden md:flex">
+
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Wishlist</div>
+                </a>
+
+                <a href="#" id="cart" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <div class="text-xs leading-3">Cart</div>
+
+                </a>
+
+                <a href="account.html" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Account</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-gray-800">
+        <div class="container flex mx-auto ">
+            <div class="px-8 py-4 bg-red-400 md:flex items-center cursor-pointer relative group hidden">
+                <span class="text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <span class="capitalize ml-2 text-white ">All Categories</span>
+
+                <!-- dropdown -->
+                <div
+                    class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="assets/images/icons/sofa.svg" alt="sofa" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Sofa</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="assets/images/icons/terrace.svg" alt="terrace" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Terarce</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="assets/images/icons/bed.svg" alt="bed" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Bed</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="assets/images/icons/office.svg" alt="office" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">office</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="assets/images/icons/outdoor-cafe.svg" alt="outdoor" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Outdoor</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="assets/images/icons/bed-2.svg" alt="Mattress" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Mattress</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between flex-grow md:pl-12 py-5 px-5">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="home.html" class="text-gray-200 hover:text-white transition">Home</a>
+                    <a href="pages/shop.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                    <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
+                    <a href="#" class="text-gray-200 hover:text-white transition">Contact us</a>
+                </div>
+                <a href="pages/login.html" class="text-gray-200 hover:text-white transition">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-cover bg-no-repeat bg-center py-36"
+        style="background-image: url(/ecommerce-template-tailwind-1-main/public/assets/images/banner-bg.jpg);">
+        <div class="container mx-auto">
+            <h1 class="text-6xl font-medium capitalize mb-4 text-gray-800">Best Collection For
+                <br> Home Decoration
+            </h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                accusantium perspiciatis, sapiente magni eos dolorum ex quos dolores odio</p>
+            <div class="mt-12 ">
+                <a href=""
+                    class="bg-red-400 border border-red-400 hover:text-red-400  text-white px-8 py-3 font-medium rounded-md hover:bg-transparent">Shop
+                    Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6">
+        <div class="container py-16 grid grid-cols-1 md:grid-cols-3 gap-6 justify-center mx-auto">
+            <div class="border border-primary rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <img src="/ecommerce-template-tailwind-1-main/public/assets/images/icons/delivery-van.svg"
+                    alt="Delivery" class="w-12 h-12 object-contain">
+                <div>
+                    <h4 class="font-medium capitalize text-lg">Free Shipping</h4>
+                    <p class="text-gray-500 text-sm">Order over $200</p>
+                </div>
+            </div>
+            <div class="border border-primary rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <img src="/ecommerce-template-tailwind-1-main/public/assets/images/icons/delivery-van.svg"
+                    alt="Delivery" class="w-12 h-12 object-contain">
+                <div>
+                    <h4 class="font-medium capitalize text-lg">Free Shipping</h4>
+                    <p class="text-gray-500 text-sm">Order over $200</p>
+                </div>
+            </div>
+            <div class="border border-primary rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <img src="/ecommerce-template-tailwind-1-main/public/assets/images/icons/delivery-van.svg"
+                    alt="Delivery" class="w-12 h-12 object-contain">
+                <div>
+                    <h4 class="font-medium capitalize text-lg">Free Shipping</h4>
+                    <p class="text-gray-500 text-sm">Order over $200</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6">
+        <div class="container py-16 mx-auto">
+            <h1 class="text-gray-800 text-2xl uppercase mb-6 font-medium">shop by category</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="relative rounded-sm ">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/category/category-1.jpg" alt=""
+                        class="">
+                    <a href=""
+                        class="uppercase inset-0 absolute bg-black bg-opacity-40 flex items-center justify-center text-white text-xl font-serif font-medium transition hover:bg-opacity-60">bedroom</a>
+                </div>
+                <div class="relative rounded-sm ">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/category/category-1.jpg" alt=""
+                        class="">
+                    <a href=""
+                        class="uppercase inset-0 absolute bg-black bg-opacity-40 flex items-center justify-center text-white text-xl font-serif font-medium transition hover:bg-opacity-60">bedroom</a>
+                </div>
+                <div class="relative rounded-sm ">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/category/category-1.jpg" alt=""
+                        class="">
+                    <a href=""
+                        class="uppercase inset-0 absolute bg-black bg-opacity-40 flex items-center justify-center text-white text-xl font-serif font-medium transition hover:bg-opacity-60">bedroom</a>
+                </div>
+                <div class="relative rounded-sm ">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/category/category-1.jpg" alt=""
+                        class="">
+                    <a href=""
+                        class="uppercase inset-0 absolute bg-black bg-opacity-40 flex items-center justify-center text-white text-xl font-serif font-medium transition hover:bg-opacity-60">bedroom</a>
+                </div>
+                <div class="relative rounded-sm ">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/category/category-1.jpg" alt=""
+                        class="">
+                    <a href=""
+                        class="uppercase inset-0 absolute bg-black bg-opacity-40 flex items-center justify-center text-white text-xl font-serif font-medium transition hover:bg-opacity-60">bedroom</a>
+                </div>
+                <div class="relative rounded-sm ">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/category/category-1.jpg" alt=""
+                        class="">
+                    <a href=""
+                        class="uppercase inset-0 absolute bg-black bg-opacity-40 flex items-center justify-center text-white text-xl font-serif font-medium transition hover:bg-opacity-60">bedroom</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 container mx-auto px-6">
+        <h2 class="text-gray-800 text-2xl font-medium uppercase mb-6">TOP NEW ARRIVAL</h2>
+        <div class="grid md:grid-cols-4 gap-3 ">
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div
+                        class="absolute space-x-4 flex items-center inset-0 justify-center bg-black bg-opacity-30 hover:bg-opacity-70 transition">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 container mx-auto px-6">
+        <h2 class="text-gray-800 text-2xl font-medium uppercase mb-6">recommended for you</h2>
+        <div class="grid grid-cols-2  md:grid-cols-4 gap-3">
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+            <div class="rounded-md shadow bg-white relative">
+                <div class="relative">
+                    <img src="/ecommerce-template-tailwind-1-main/public/assets/images/products/product1.jpg" alt="">
+                    <div class="absolute space-x-4 flex items-center inset-0 justify-center ">
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                        <a href="" class="h-10 w-10 bg-red-500 rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <div class="py-4 px-3">
+                    <a href="">
+                        <h1 class="uppercase text-xl font-medium text-gray-800 hover:text-gray-500 mb-2">guyer chair
+                        </h1>
+                    </a>
+                    <p class="text-lg text-red-400 font-medium mb-2">$45.00</p>
+                    <button
+                        class="uppercase bg-red-500 hover:bg-red-400 w-full rounded-md py-1 text-white font-medium">add
+                        to cart</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="py-6">
+        <a href="">
+            <img src="/ecommerce-template-tailwind-1-main/public/assets/images/offer.jpg" alt="">
+        </a>
+    </section>
+    <footer>
+        <div class="container mx-auto py-10 px-6 text-left">
+            <a href="" class=" text-red-400 text-2xl font-bold uppercase ">sa<span class="text-black">nity</span></a>
+            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, error.</p>
+            <div class="grid grid-cols-2 lg:grid-cols-4">
+                <div class="space-y-3">
+                    <h1 class="uppercase pt-4 font-medium text-lg">Solutions</h1>
+                    <ul class="space-y-3 text-gray-800">
+                        <li><a href="" class="capitalize hover:text-gray-400">thermodynamics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">statics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">statistics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">eng drawing</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3">
+                    <h1 class="uppercase pt-4 font-medium text-lg">Solutions</h1>
+                    <ul class="space-y-3 text-gray-800">
+                        <li><a href="" class="capitalize hover:text-gray-400">thermodynamics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">statics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">statistics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">eng drawing</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3">
+                    <h1 class="uppercase pt-4 font-medium text-lg">Solutions</h1>
+                    <ul class="space-y-3 text-gray-800">
+                        <li><a href="" class="capitalize hover:text-gray-400">thermodynamics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">statics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">statistics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">eng drawing</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3">
+                    <h1 class="uppercase pt-4 font-medium text-lg">Solutions</h1>
+                    <ul class="space-y-3 text-gray-800">
+                        <li><a href="" class="capitalize hover:text-gray-400">thermodynamics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">statics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">statistics</a></li>
+                        <li><a href="" class="capitalize hover:text-gray-400">eng drawing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
